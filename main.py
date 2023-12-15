@@ -26,11 +26,11 @@ print(title)
 
 # EMAIL USING SMTP
 if float(final_price) < 100:
-    my_email = "pythonusecode@gmail.com"
-    password = "ohtuqsysukwikisz"
+    my_email = [YOUR EMAIL]
+    password = [YOUR PASSWORD]
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(user=my_email, password=password)
         connection.sendmail(from_addr=my_email,
-                            to_addrs="harshitabaid15@gmail.com",
+                            to_addrs=[RECEIVER EMAIL],
                             msg=f"Subject:{title}\n\n{final_price}\n{URL}".encode('ascii', 'ignore').decode('ascii'))
